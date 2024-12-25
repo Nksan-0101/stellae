@@ -63,6 +63,18 @@ button:hover {
     animation: fadeIn 1s ease-in-out;
 }
 
+#interpretation {
+    font-size: 0.9em;
+    margin-top: 10px;
+    color: #f39c12;
+}
+
+#advice {
+    font-size: 0.9em;
+    margin-top: 10px;
+    color: #00eaff;
+}
+
 /* 隐藏状态 */
 .hidden {
     display: none;
