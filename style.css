@@ -31,6 +31,7 @@ body {
 h1 {
     font-size: 2.5em;
     margin-bottom: 0.5em;
+    text-shadow: 0 0 10px #00eaff;
 }
 
 p {
@@ -38,6 +39,7 @@ p {
     font-size: 1.2em;
 }
 
+/* 按钮样式 */
 button {
     background: #4a90e2;
     color: white;
@@ -47,32 +49,23 @@ button {
     margin-top: 20px;
     cursor: pointer;
     border-radius: 5px;
-    transition: background 0.3s ease;
+    transition: background 0.3s ease, transform 0.1s ease-in-out;
 }
 
 button:hover {
     background: #357ab7;
+    transform: scale(1.05);
 }
 
 /* 签文展示 */
 .result {
     margin-top: 30px;
     padding: 20px;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.8);
     border-radius: 10px;
+    border: 1px solid #4a90e2;
+    box-shadow: 0 0 20px rgba(74, 144, 226, 0.5);
     animation: fadeIn 1s ease-in-out;
-}
-
-#interpretation {
-    font-size: 0.9em;
-    margin-top: 10px;
-    color: #f39c12;
-}
-
-#advice {
-    font-size: 0.9em;
-    margin-top: 10px;
-    color: #00eaff;
 }
 
 /* 隐藏状态 */
@@ -84,6 +77,39 @@ button:hover {
 #title {
     font-size: 1.8em;
     margin-bottom: 10px;
+    color: #ffdd57;
+    text-shadow: 0 0 10px #ffdd57;
+}
+
+/* 签文内容 */
+#content {
+    font-size: 1.2em;
+    margin-top: 10px;
+    color: #e0e0e0;
+}
+
+/* 拉丁文 */
+#latin {
+    font-size: 1em;
+    margin-top: 10px;
+    font-style: italic;
+    color: #c2b280;
+}
+
+/* 释意 */
+#interpretation {
+    font-size: 0.9em;
+    margin-top: 10px;
+    color: #f39c12;
+    text-shadow: 0 0 5px #f39c12;
+}
+
+/* 建议 */
+#advice {
+    font-size: 0.9em;
+    margin-top: 10px;
+    color: #00eaff;
+    text-shadow: 0 0 5px #00eaff;
 }
 
 /* 动画效果 */
@@ -94,4 +120,61 @@ button:hover {
     to {
         opacity: 1;
     }
+}
+
+/* 特定签文类型样式 */
+
+/* 流星签（Stella） */
+.result.stella {
+    border-color: #00eaff;
+    box-shadow: 0 0 20px #00eaff;
+    animation: glowStella 2s infinite alternate;
+}
+
+@keyframes glowStella {
+    from {
+        box-shadow: 0 0 10px #00eaff;
+    }
+    to {
+        box-shadow: 0 0 30px #00eaff;
+    }
+}
+
+/* 星核签（Nucleus） */
+.result.nucleus {
+    border-color: #ff00ff;
+    box-shadow: 0 0 20px #ff00ff;
+    animation: pulseNucleus 3s infinite ease-in-out;
+}
+
+@keyframes pulseNucleus {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.05);
+    }
+}
+
+/* 黑洞签（Abyss） */
+.result.abyss {
+    border-color: #ff4500;
+    box-shadow: 0 0 20px #ff4500;
+    animation: fadeAbyss 4s infinite alternate;
+}
+
+@keyframes fadeAbyss {
+    from {
+        opacity: 0.8;
+    }
+    to {
+        opacity: 0.4;
+    }
+}
+
+/* 页脚 */
+footer {
+    margin-top: 50px;
+    font-size: 0.8em;
+    color: #888;
 }
