@@ -2,11 +2,12 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Georgia', serif;
+    font-family: 'Press Start 2P', cursive;
     background: black;
     overflow: hidden;
     color: white;
     text-align: center;
+    image-rendering: pixelated;
 }
 
 /* 背景动画 */
