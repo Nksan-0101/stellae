@@ -149,10 +149,10 @@ button:hover {
 
 @keyframes pulseNucleus {
     from {
-        transform: scale(1);
+        box-shadow: 0 0 10px #ff00ff;
     }
     to {
-        transform: scale(1);
+        box-shadow: 0 0 30px #ff00ff;
     }
 }
 
