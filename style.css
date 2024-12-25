@@ -1,20 +1,21 @@
 /* 全局样式 */
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
 
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Press Start 2P', cursive;
-    background: #000;
+    font-family: 'Orbitron', sans-serif;
+    background: #0d0d0d;
+    overflow: hidden;
     color: #fff;
     text-align: center;
-    image-rendering: pixelated; /* 强制像素渲染 */
 }
 
-/* 背景：像素星空 */
+/* 背景：动态星空 + 霓虹效果 */
 .background {
-    background: url('https://i.imgur.com/JcTAbCQ.png') repeat;
-    background-size: 128px 128px;
+    background: linear-gradient(135deg, #0d0d0d, #1f1f1f);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
     position: fixed;
     top: 0;
     left: 0;
@@ -23,9 +24,11 @@ body {
     z-index: -2;
 }
 
-/* 叠加效果 */
 .overlay {
-    background: rgba(0, 0, 0, 0.5);
+    background: url('https://source.unsplash.com/random/1920x1080?space') no-repeat center center fixed;
+    background-size: cover;
+    opacity: 0.3;
+    filter: blur(8px);
     position: fixed;
     top: 0;
     left: 0;
@@ -34,68 +37,82 @@ body {
     z-index: -1;
 }
 
+/* 渐变动画 */
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 /* 容器 */
 .container {
-    margin-top: 5%;
+    margin-top: 10%;
     padding: 20px;
+    text-align: center;
     z-index: 10;
 }
 
 h1 {
-    font-size: 1.5em;
+    font-size: 2.8em;
+    margin-bottom: 0.5em;
     color: #00eaff;
     text-shadow: 0 0 10px #00eaff;
-    border: 4px solid #fff;
-    display: inline-block;
-    padding: 10px;
-    margin-bottom: 1em;
-    background: #222;
-    box-shadow: 4px 4px 0 #00eaff;
 }
 
-/* 描述文本 */
 p {
-    font-size: 0.8em;
+    font-size: 1.2em;
+    color: #ccc;
     margin: 10px 0;
 }
 
-/* 按钮 */
+/* 按钮：霓虹效果 */
 button {
-    font-family: 'Press Start 2P', cursive;
-    background: #222;
+    background: transparent;
     color: #fff;
-    border: 4px solid #fff;
-    font-size: 0.8em;
+    border: 2px solid #00eaff;
+    font-size: 1.2em;
     padding: 12px 24px;
+    margin-top: 20px;
     cursor: pointer;
+    border-radius: 8px;
     text-transform: uppercase;
-    box-shadow: 4px 4px 0 #00eaff;
-    transition: all 0.2s ease-in-out;
+    box-shadow: 0 0 15px #00eaff;
+    transition: all 0.3s ease-in-out;
 }
 
 button:hover {
     background: #00eaff;
-    color: #000;
-    box-shadow: 4px 4px 0 #fff;
+    color: #0d0d0d;
+    box-shadow: 0 0 25px #00eaff;
 }
 
 /* 签文展示 */
 .result {
     margin-top: 30px;
     padding: 20px;
-    background: #111;
-    border: 4px solid #fff;
-    box-shadow: 4px 4px 0 #00eaff;
+    background: rgba(13, 13, 13, 0.8);
+    border: 1px solid #00eaff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #00eaff;
     animation: fadeIn 1s ease-in-out;
 }
 
-.result h2 {
-    font-size: 1.2em;
-    color: #f39c12;
+/* 隐藏状态 */
+.hidden {
+    display: none;
 }
 
-.result p {
-    font-size: 0.8em;
+#title {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #f39c12;
+    text-shadow: 0 0 8px #f39c12;
 }
 
 /* 动画效果 */
@@ -110,23 +127,9 @@ button:hover {
 
 /* 页脚 */
 footer {
-    margin-top: 50px;
-    font-size: 0.6em;
+    position: fixed;
+    bottom: 10px;
+    width: 100%;
+    font-size: 0.8em;
     color: #888;
-}
-
-/* 不同签文类型样式 */
-.result.stella {
-    border-color: #00eaff;
-    box-shadow: 4px 4px 0 #00eaff;
-}
-
-.result.nucleus {
-    border-color: #ff00ff;
-    box-shadow: 4px 4px 0 #ff00ff;
-}
-
-.result.abyss {
-    border-color: #ff4500;
-    box-shadow: 4px 4px 0 #ff4500;
 }
