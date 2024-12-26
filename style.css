@@ -1,3 +1,32 @@
+/* 引入像素 Silver 字体 */
+@font-face {
+    font-family: 'Silver';
+    src: url('assets/fonts/Silver.woff2') format('woff2'),
+         url('assets/fonts/Silver.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 应用像素 Silver 字体 */
+body {
+    font-family: 'Silver' , cursive;
+    background-color: black;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    image-rendering: pixelated; /* 保证像素风格清晰 */
+}
+
+/* 标题样式 */
+h1, h2 {
+    font-family: 'Silver', sans-serif;
+    font-size: 1.5em;
+    color: #00eaff;
+    text-shadow: 0 0 5px #00eaff;
+}
+
 /* 全局样式 */
 body {
     margin: 0;
@@ -41,6 +70,8 @@ p {
 
 /* 按钮样式 */
 button {
+    font-family: 'Silver', sans-serif;
+    font-size: 1em;
     background: #4a90e2;
     color: white;
     font-size: 1.2em;
