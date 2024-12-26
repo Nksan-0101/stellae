@@ -97,7 +97,7 @@ drawButton.addEventListener('click', () => {
     resultDiv.classList.add('hidden');
     loadingDiv.classList.remove('hidden');
 
-    // 模拟加载过程（例如 2 秒后显示签文）
+    // 模拟加载过程（2秒后显示签文）
     setTimeout(() => {
         // 随机抽取一个签文
         const randomIndex = Math.floor(Math.random() * fortunes.length);
