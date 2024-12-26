@@ -11,6 +11,7 @@
 body {
     font-family: 'Silver' , cursive;
     font-size: 1.5rem;
+    line-height: 0.8;
     background-color: black;
     color: white;
     text-align: center;
@@ -23,7 +24,7 @@ body {
 /* 标题样式 */
 h1, h2 {
     font-family: 'Silver', sans-serif;
-    font-size: 1.5em;
+    font-size: 1.4em;
     color: #00eaff;
     text-shadow: 0 0 5px #00eaff;
 }
