@@ -23,6 +23,23 @@ body {
     -moz-osx-font-smoothing:grayscale;
 }
 
+/* 移动端样式 */
+@media (max-width: 768px) {
+    body {
+        font-size: 1.2rem; /* 缩小字体以适应小屏幕 */
+        line-height: 1.1;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+}
+
 /* 标题样式 */
 h1, h2 {
     font-family: 'Silver', sans-serif;
