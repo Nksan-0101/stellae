@@ -196,7 +196,7 @@ button:hover {
 
 /* 释意 */
 #interpretation {
-    font-size: 0.9em;
+    font-size: 1em;
     margin-top: 10px;
     color: #f39c12;
     text-shadow: 0 0 5px #f39c12;
@@ -204,7 +204,7 @@ button:hover {
 
 /* 建议 */
 #advice {
-    font-size: 0.9em;
+    font-size: 1em;
     margin-top: 10px;
     color: #00eaff;
     text-shadow: 0 0 5px #00eaff;
