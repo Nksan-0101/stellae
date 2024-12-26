@@ -10,6 +10,7 @@
 /* 应用像素 Silver 字体 */
 body {
     font-family: 'Silver' , cursive;
+    font-size: 1.5rem;
     background-color: black;
     color: white;
     text-align: center;
