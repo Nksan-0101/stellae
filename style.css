@@ -71,10 +71,10 @@ p {
 /* 按钮样式 */
 button {
     font-family: 'Silver', sans-serif;
-    font-size: 1em;
+    font-size: 1.2em;
     background: #4a90e2;
     color: white;
-    font-size: 1.2em;
+    font-size: 1.4em;
     border: none;
     padding: 10px 20px;
     margin-top: 20px;
