@@ -84,31 +84,38 @@ const fortunes = [
 // 🌠 绑定 DOM 元素
 const drawButton = document.getElementById('drawButton');
 const resultDiv = document.getElementById('result');
+const loadingDiv = document.getElementById('loading');
 const title = document.getElementById('title');
 const content = document.getElementById('content');
-const latin = document.getElementById('latin'); // 拉丁文
-const interpretation = document.getElementById('interpretation'); // 释意
-const advice = document.getElementById('advice'); // 建议
+const latin = document.getElementById('latin');
+const interpretation = document.getElementById('interpretation');
+const advice = document.getElementById('advice');
 
 // 🎲 抽签逻辑
 drawButton.addEventListener('click', () => {
-    // 随机抽取一个签文
-    const randomIndex = Math.floor(Math.random() * fortunes.length);
-    const fortune = fortunes[randomIndex];
+    // 隐藏签文内容，显示加载动画
+    resultDiv.classList.add('hidden');
+    loadingDiv.classList.remove('hidden');
 
-    // 更新页面内容
-    title.textContent = fortune.title;
-    content.textContent = fortune.content;
-    latin.textContent = fortune.latin || "（暂无拉丁文翻译）";
-    interpretation.textContent = `✨ 释意: ${fortune.interpretation}`;
-    advice.textContent = `🪐 建议: ${fortune.advice}`;
+    // 模拟加载过程（例如 2 秒后显示签文）
+    setTimeout(() => {
+        // 随机抽取一个签文
+        const randomIndex = Math.floor(Math.random() * fortunes.length);
+        const fortune = fortunes[randomIndex];
 
-    // 移除之前的类型样式
-    resultDiv.classList.remove('hidden', 'stella', 'nucleus', 'abyss');
+        // 更新签文内容
+        title.textContent = fortune.title;
+        content.textContent = fortune.content;
+        latin.textContent = fortune.latin || "（暂无拉丁文翻译）";
+        interpretation.textContent = `✨ 释意: ${fortune.interpretation}`;
+        advice.textContent = `🪐 建议: ${fortune.advice}`;
 
-    // 添加新的类型样式
-    resultDiv.classList.add(fortune.type);
+        // 应用不同类型的样式
+        resultDiv.classList.remove('hidden', 'stella', 'nucleus', 'abyss');
+        resultDiv.classList.add(fortune.type);
 
-    // 显示结果区域
-    resultDiv.classList.remove('hidden');
+        // 隐藏加载动画，显示签文内容
+        loadingDiv.classList.add('hidden');
+        resultDiv.classList.remove('hidden');
+    }, 2000); // 模拟2秒的加载时间
 });
