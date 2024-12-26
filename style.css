@@ -26,17 +26,17 @@ body {
 /* 移动端样式 */
 @media (max-width: 768px) {
     body {
-        font-size: 1.2rem; /* 缩小字体以适应小屏幕 */
+        font-size: 4vw; /* 缩小字体以适应小屏幕 */
         line-height: 1.1;
     }
 
     h1 {
-        font-size: 1.5rem;
+        font-size: 6vw;
     }
 
     button {
-        font-size: 1rem;
-        padding: 8px 16px;
+        font-size: 4vw;
+        padding: 2vw 4vw;
     }
 }
 
