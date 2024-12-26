@@ -251,7 +251,7 @@ button:hover {
 .result.nucleus {
     border-color: #ff00ff;
     box-shadow: 0 0 20px #ff00ff;
-    animation: pulseNucleus 3s infinite ease-in-out;
+    animation: glowNucleus 2s infinite alternate;
 }
 
 @keyframes pulseNucleus {
